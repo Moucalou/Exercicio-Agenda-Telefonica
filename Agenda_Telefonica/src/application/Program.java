@@ -57,9 +57,18 @@ public class Program {
 				}
 				break;
 			case 4:
+				System.out.println("=== CONTACT EXCLUSION ===");
+				System.out.println("Please, select the contact index you want to Delete");
+				for (int i=0; i<phoneList.size(); i++) {
+					System.out.println("#" + (i + 1) + ": " + phoneList.get(i));					
+				}
+				int delete = sc.nextInt();
+				sc.nextLine();
+				System.out.println("The contact " + phoneList.get(delete - 1) + " was deleted successfully");
+				phoneList.remove(delete - 1);
 				break;
 			case 5:
-				break;
+				return;
 			}
 			
 			
