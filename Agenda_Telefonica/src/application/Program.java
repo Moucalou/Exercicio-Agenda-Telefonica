@@ -39,6 +39,10 @@ public class Program {
 			case 2:
 				break;
 			case 3:
+				System.out.println("=== CONTACT LIST ===");
+				for (int i=0; i<phoneList.size(); i++) {
+					System.out.println("#" + (i + 1) + ": " + phoneList.get(i));
+				}
 				break;
 			case 4:
 				break;
