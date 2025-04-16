@@ -28,6 +28,7 @@ public class Program {
 			switch (option) {
 			case 1:
 				ArrayList<String> contact = new ArrayList<>();
+				System.out.println("=== CREATE CONTACT ===");
 				System.out.print("Please, enter the contact name: ");
 				String name = sc.nextLine();
 				contact.add(name);
@@ -37,6 +38,17 @@ public class Program {
 				phoneList.add(contact);
 				break;
 			case 2:
+				System.out.println("=== CONTACT SEARCHING ===");
+				System.out.print("Please, enter the contact name you want to search: ");
+				name = sc.nextLine();
+				for (int i=0; i<phoneList.size(); i++) {
+					if (phoneList.get(i).get(0).contains(name)) {
+						System.out.println(phoneList.get(i));
+						break;
+					} else if (i == (phoneList.size() - 1)) {
+						System.out.println("Contact doesn't exist!");
+					}
+				}
 				break;
 			case 3:
 				System.out.println("=== CONTACT LIST ===");
